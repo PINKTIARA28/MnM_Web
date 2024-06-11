@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MnM~Mix n Match</title>
+    <link href='HCI_Kelompok_Mnm_logo.png' rel="shortcut icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="wrap"> 
+        <nav class="nav">
+            
+            <div class="nav-mnm">
+                <p>MnM</p>
+             </div>
+             <div class="tab" id="navMenu">
+                <button class="tablinks" onclick="window.location.href = 'http://127.0.0.1:5500/stylego.html'">Your Style</button>
+                <button class="tablinks active" onclick="window.location.href = 'http://127.0.0.1:5500/creatego.html'">Create</button>
+        
+                <button class="tablinks active" onclick="window.location.href = 'http://127.0.0.1:5500/likego.html'">Our Trend</button>
+
+            
+            </div>
+            <div class="log">
+                <button class="btn white-btn" id="loginBtn" onclick="window.location.href = 'http://127.0.0.1:5500/login.html'">Sign In</button>
+                <button class="btn" id="registerBtn" onclick="window.location.href = 'http://127.0.0.1:5500/login.html'">Sign Up</button>
+            </div>
+            <!-- <div class="log">
+                <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+                <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+            </div> -->
+            <!-- <div class="log">
+                <button class="btn white-btn" id="loginBtn" onclick="window.location.href = 'http://127.0.0.1:5500/login.html'">Log Out</button>
+            </div> -->
+            <!-- <div class="log">
+                <button class="btn white-btn" id="loginBtn" onclick="window.location.href = 'http://127.0.0.1:5500/login.html'">Sign In</button>
+                <button class="btn" id="registerBtn" onclick="window.location.href = 'http://127.0.0.1:5500/login.html'">Sign Up</button>
+            </div> -->
+            <!----------ini harusnya untuk menu garis 3 tapi blm bs jalan-->
+            <!-- -<div class="menu">
+                <i class='bx bx-menu' onclick="myMenuFunction()"></i>
+            </div>- -->
+         
+    
+        </nav>
+        <!-- <div class="content">
+            <div class="kotakKiri">
+                <h3>Choose Your Style</h3>
+                <div class="style-options">
+                
+                    <button class="Feminime button" onclick="window.location.href = 'http://127.0.0.1:5500/Feminime.html'">Feminime</button>
+                    <button class="Masculin button" onclick="window.location.href = 'http://127.0.0.1:5500/masculine.html'">Masculine</button>
+                    <button class="Unisex button" onclick="window.location.href = 'http://127.0.0.1:5500/unisex.html'">Unisex</button>
+                </div>
+            </div>
+            <div class="kotakKanan">
+              
+                
+            </div>
+        </div> -->
+        <div class="posts-container">
+        <div class="post" data-post-id="7712">
+            <img class="post-image" src="cewe1.jpg" alt="Post Image">
+            <div class="post-ratings-container">
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons" onclick="redirectToLogin()">thumb_up</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons" onclick="redirectToLogin()">thumb_down</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="post" data-post-id="7712">
+            <img class="post-image" src="cewe2.jpg" alt="Post Image">
+            <div class="post-ratings-container">
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons" onclick="redirectToLogin()">thumb_up</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons"onclick="redirectToLogin()">thumb_down</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="post" data-post-id="7712">
+            <img class="post-image" src="cewe3.jpg" alt="Post Image">
+            <div class="post-ratings-container">
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons"onclick="redirectToLogin()">thumb_up</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons"onclick="redirectToLogin()">thumb_down</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="post" data-post-id="7712">
+            <img class="post-image" src="cowo1.jpg" alt="Post Image">
+            <div class="post-ratings-container">
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons"onclick="redirectToLogin()">thumb_up</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons"onclick="redirectToLogin()">thumb_down</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="post" data-post-id="7712">
+            <img class="post-image" src="cowo2.jpg" alt="Post Image">
+            <div class="post-ratings-container">
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons"onclick="redirectToLogin()">thumb_up</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons"onclick="redirectToLogin()">thumb_down</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="post" data-post-id="7712">
+            <img class="post-image" src="cowo3.jpg" alt="Post Image">
+            <div class="post-ratings-container">
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons"onclick="redirectToLogin()">thumb_up</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons"onclick="redirectToLogin()">thumb_down</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="post" data-post-id="7712">
+            <img class="post-image" src="unisex1.jpg" alt="Post Image">
+            <div class="post-ratings-container">
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons"onclick="redirectToLogin()">thumb_up</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons"onclick="redirectToLogin()">thumb_down</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="post" data-post-id="7712">
+            <img class="post-image" src="unisex2.jpg" alt="Post Image">
+            <div class="post-ratings-container">
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons"onclick="redirectToLogin()">thumb_up</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons"onclick="redirectToLogin()">thumb_down</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="post" data-post-id="7712">
+            <img class="post-image" src="unisex3.jpg" alt="Post Image">
+            <div class="post-ratings-container">
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons"onclick="redirectToLogin()">thumb_up</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+                <div class="post-rating">
+                    <span class="post-rating-button material-icons"onclick="redirectToLogin()">thumb_down</span>
+                    <span class="post-rating-count">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <script>
+        function redirectToLogin() {
+            alert('Please log in first.');
+            window.location.href = 'login.html';
+        }
+    </script>
+
+    
+</body>
+</html>

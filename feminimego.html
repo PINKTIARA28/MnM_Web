@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MnM~Mix n Match</title>
+    <link href='HCI_Kelompok_Mnm_logo.png' rel="shortcut icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="feminime.css">
+</head>
+<body>
+    <div class="wrap"> 
+        <nav class="nav">
+            <div class="nav-mnm">
+                <p>MnM</p>
+             </div>
+             <div class="tab" id="navMenu">
+                <button class="tablinks active" onclick="window.location.href = 'http://127.0.0.1:5500/yourstyle.html';">Your Style</button>
+                <button class="tablinks" onclick="window.location.href = 'http://127.0.0.1:5500/create.html';">Create</button>
+
+                <button class="tablinks" onclick="window.location.href = 'http://127.0.0.1:5500/likego.html'">Our Trend</button>
+                
+            
+            
+            </div>
+            <!-- <div class="log">
+                <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+                <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+            </div> -->
+            <div class="log">
+                <button class="btn white-btn" id="loginBtn" onclick="window.location.href = 'http://127.0.0.1:5500/login.html'">Sign In</button>
+                <button class="btn" id="registerBtn" onclick="window.location.href = 'http://127.0.0.1:5500/login.html'">Sign Up</button>
+            </div>
+            <!----------ini harusnya untuk menu garis 3 tapi blm bs jalan-->
+            <!-- -<div class="menu">
+                <i class='bx bx-menu' onclick="myMenuFunction()"></i>
+            </div>- -->
+         
+    
+        </nav>
+       
+        <div class="content">
+            <div class="kotakKiri">
+                <h3>Choose Your Style</h3>
+                <div class="style-options">
+                
+                    <button class="Feminime" onclick="window.location.href = 'http://127.0.0.1:5500/feminimego.html'">Feminime</button>
+                    <button class="Masculine button" onclick="window.location.href = 'http://127.0.0.1:5500/masculinego.html'">Masculine</button>
+                    <button class="Unisex button" onclick="window.location.href = 'http://127.0.0.1:5500/unisexgo.html'">Unisex</button>
+                </div>
+            </div>
+            <div class="kotakKanan">
+              
+                
+            </div>
+        </div>
+        
+        <div class="creating">
+            <button onclick="redirectToLogin()">Let's Create</button>
+        </div>
+    <!---------------form--------------------->
+        <!-- <div class="form-box"> -->
+        <!------------login -->
+            <!-- <div class="login-container" id="login">
+                <div class="top2">
+                    <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                    <header>Login</header>
+                 </div>
+            
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Username or Email">
+                    <i class="bx bx-user"></i>
+
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Password">
+                    <i class="bx bx-lock-alt"></i>
+
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Sign In"> 
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="login-check">
+                        <label for="login-check">Remember me</label>
+                    </div>
+                    <div class="two">
+                        <label> <a href="#">|Forgot password?</a></label>
+                    </div>
+                </div>
+            </div> -->
+        <!-------------Register-->
+            <!-- <div class="register-container" id="register">
+                <div class="top">
+                    <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                    <header>Sign Up</header>
+                </div>
+                <div class="two-forms">
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Firstname">
+                        <i class="bx bx-user"></i>
+
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Lastname">
+                        <i class="bx bx-user"></i>
+
+                    </div>
+                </div> -->
+                <!-- <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Email">
+                    <i class="bx bx-envelope"></i>
+
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Password">
+                    <i class="bx bx-lock-alt"></i>
+
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Register">
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="register-check"> -->
+                        <!-- <label for="register-check">Remember me</label>
+                    </div>
+                    <div class="two">
+                        <label> <a href="#">Terms & conditions</a></label>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!---ini function untuk menu garis 3-->
+        <!----
+        <script>
+            function myMenuFunction(){
+                var menu = document.getElementById("navMenu");
+                if(menu.classList.contains("responsive")){
+                    menu.classList.remove("responsive");
+                } else {
+                    menu.classList.add("responsive");
+                }
+            }
+        </script>
+    --> 
+        <!-- <script>
+           
+
+            function goToYourStyle(){
+                var yourStyleButton = document.getElementById('Preverensi');
+                
+                yourStyleButton.click(); 
+                showContent();// Klik tombol "YourStyle" untuk menampilkan kontennya
+            }
+
+        </script> -->
+        <script>
+            var a = document.getElementById("loginBtn");
+            var b = document.getElementById("registerBtn");
+            var x = document.getElementById("login");
+            var y = document.getElementById("register");
+
+            // function login(){
+            //     x.style.left = "38px";
+            //     y.style.right ="-620px";
+            //     a.className +="white-btn";
+            //     b.className ="btn";
+            //     x.style.opacity = 1;
+            //     y.style.opacity =0;
+            //     ContentStatus = document.querySelector('.content').style.display;
+            //     document.querySelector('.content').style.display = 'none';
+            //     hideContent();
+            //     showForm();
+    
+            // }
+            // function register(){
+            //     x.style.left="-510px";
+            //     y.style.right="5px";
+            //     a.className ="btn";
+            //     b.className +="white-btn";
+            //     x.style.opacity = 0;
+            //     y.style.opacity =1;
+            //     hideContent();
+            //     showForm();
+                
+            // }
+            // function showForm() {
+            //     document.querySelector('.form-box').style.display = 'block';
+                
+            
+            // }
+            // function hideContent() {
+            //     document.querySelector('.content').style.display = 'none';
+            // }
+            // function showContent() {
+            //     document.querySelector('.content').style.display = 'block';
+                
+            
+            // }
+
+        </script>
+        <script>
+            function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+                if (cityName === "Home" || cityName === "Preverensi" || cityName === "Trend" || cityName === "Create") {
+                   hideForm();
+                   showContent();
+                }
+            }
+             function hideForm() {
+                document.querySelector('.form-box').style.display = 'none';
+            }
+        </script>
+   </div> 
+   <script>
+    function redirectToLogin() {
+        alert('Please log in first.');
+        window.location.href = 'login.html';
+    }
+    </script>
+</body>
+</html>
+

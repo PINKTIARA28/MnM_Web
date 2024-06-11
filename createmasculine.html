@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MnM~Mix n Match</title>
+    <link href='HCI_Kelompok_Mnm_logo.png' rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="stylefem.css">
+</head>
+<body>
+    <div class="wrap"> 
+        <nav class="nav">
+            <div class="nav-mnm">
+                <p>MnM</p>
+            </div>
+            <div class="tab" id="navMenu">
+                <button class="tablinks" onclick="window.location.href = 'yourstyle.html'">Your Style</button>
+                <button class="tablinks active" onclick="window.location.href = 'create.html'">Create</button>
+                <button class="tablinks" onclick="window.location.href = 'likeanddislike.html'">Our Trend</button>
+            </div>
+            <div class="log">
+                <button class="btn white-btn" id="loginBtn" onclick="window.location.href = 'login.html'">Log Out</button>
+            </div>
+        </nav>
+        <div class="kotakopt">
+            <div class="style-op">
+                <button class="button" onclick="showCategory('top')">Top</button>
+                <button class="button" onclick="showCategory('bottom')">Bottom</button>
+                <button class="button" onclick="showCategory('shoes')">Shoes</button>
+            </div>
+        </div>
+
+        <div class="image" id="imageContainer">
+            <!-- Container for images will be dynamically populated -->
+        </div>
+
+        <!-- Form untuk mengirim data yang dipilih ke selected.html -->
+        <form id="imageForm" action="select.html" method="get">
+            <input type="hidden" name="topImage" id="topImage">
+            <input type="hidden" name="bottomImage" id="bottomImage">
+            <input type="hidden" name="shoesImage" id="shoesImage">
+            <button type="button" class="result-button" id="mixAndMatchButton">Mix & Match</button>
+        </form>
+
+        <div class="kotakprev">
+            <div class="style-prever">
+                <button class="button" onclick="window.location.href = 'createfeminime.html'">Feminime</button>
+                <button class="Feminime" onclick="window.location.href = 'mcreateasculine.html'">Masculine</button>
+                <button class="button" onclick="window.location.href = 'createunisex.html'">Unisex</button>
+            </div>
+        </div>
+        <!-- <div class="image">
+            <div>
+                <img src="create.jpg" alt="Gambar 1">
+               
+            </div>
+        </div> -->
+        <!-- <div class="kotakcreate2">
+              
+                
+        </div> -->
+
+    </div> 
+
+    <script>
+        // Data untuk masing-masing kategori (Top, Bottom, Shoes)
+        const data = {
+            top: [
+                { imgSrc: 'm1.jpg', alt: 'Gambar 2' },
+                { imgSrc: 'm2.jpg', alt: 'Gambar 2' },
+                { imgSrc: 'm3.jpg', alt: 'Gambar 3' },
+                { imgSrc: 'm4.jpg', alt: 'Gambar 4' },
+                { imgSrc: 'm5.jpg', alt: 'Gambar 5' },
+                // Tambahkan gambar-gambar top lainnya di sini
+            ],
+            bottom: [
+                { imgSrc: 'mc1.jpg', alt: 'Gambar 6' },
+                { imgSrc: 'mc2.jpg', alt: 'Gambar 7' },
+                { imgSrc: 'mc3.jpg', alt: 'Gambar 8' },
+                { imgSrc: 'mc4.jpg', alt: 'Gambar 9' },
+                { imgSrc: 'mc5.jpg', alt: 'Gambar 10' },
+                // Tambahkan gambar-gambar bottom lainnya di sini
+            ],
+            shoes: [
+                { imgSrc: 'ms1.jpg', alt: 'Gambar 7' },
+                { imgSrc: 'ms2.jpg', alt: 'Gambar 8' },
+                { imgSrc: 'ms3.jpg', alt: 'Gambar 9' },
+                { imgSrc: 'ms4.jpg', alt: 'Gambar 6' },
+                { imgSrc: 'ms5.jpg', alt: 'Gambar 6' },
+                // Tambahkan gambar-gambar shoes lainnya di sini
+            ]
+        };
+
+        // Objek untuk menyimpan nilai input yang dipilih
+        let selectedImages = {
+            top: '',
+            bottom: '',
+            shoes: ''
+        };
+
+        // Fungsi untuk menampilkan gambar-gambar sesuai kategori yang dipilih
+        function showCategory(category) {
+            const container = document.getElementById('imageContainer');
+            container.innerHTML = ''; // Kosongkan container
+
+            // Ambil data gambar sesuai kategori
+            const images = data[category];
+
+            // Tampilkan gambar menggunakan radio button
+            images.forEach((image, index) => {
+                const imageDiv = document.createElement('div');
+                imageDiv.classList.add('checkbox-container');
+
+                // Buat input radio button
+                const input = document.createElement('input');
+                input.type = 'radio';
+                input.name = `${category}Image`;
+                input.id = `${category}Image${index}`;
+                input.value = image.imgSrc;
+
+                // Periksa apakah ada nilai input yang dipilih sebelumnya
+                if (selectedImages[category] === image.imgSrc) {
+                    input.checked = true; // Beri tanda checked jika nilai sebelumnya cocok
+                }
+
+                // Buat label untuk input radio
+                const label = document.createElement('label');
+                label.setAttribute('for', `${category}Image${index}`);
+
+                // Tambahkan gambar dalam label
+                const img = document.createElement('img');
+                img.src = image.imgSrc;
+                img.alt = image.alt;
+
+                // Tambahkan gambar ke dalam label
+                label.appendChild(img);
+
+                // Tambahkan input dan label ke dalam div
+                imageDiv.appendChild(input);
+                imageDiv.appendChild(label);
+
+                // Tambahkan div ke dalam container
+                container.appendChild(imageDiv);
+            });
+
+            // Event listener untuk menangani perubahan input yang dipilih
+            const inputs = container.querySelectorAll('input[type="radio"]');
+            inputs.forEach(input => {
+                input.addEventListener('change', function () {
+                    selectedImages[category] = this.value; // Simpan nilai input yang dipilih
+                });
+            });
+        }
+
+        // Ambil elemen tombol "Mix & Match" dan form
+        const mixAndMatchButton = document.getElementById('mixAndMatchButton');
+        const imageForm = document.getElementById('imageForm');
+
+        // Tambahkan event listener ke tombol Mix & Match
+        mixAndMatchButton.addEventListener('click', function(event) {
+            // Cek apakah setiap kategori memiliki gambar yang dipilih
+            if (!selectedImages.top || !selectedImages.bottom || !selectedImages.shoes) {
+                alert('Harap pilih satu gambar untuk setiap kategori (Top, Bottom, dan Shoes)');
+                event.preventDefault(); // Hentikan pengiriman form jika tidak semua kategori dipilih
+                return;
+            }
+
+            // Isi nilai input dengan gambar yang dipilih sebelum mengirim form
+            document.getElementById('topImage').value = selectedImages.top;
+            document.getElementById('bottomImage').value = selectedImages.bottom;
+            document.getElementById('shoesImage').value = selectedImages.shoes;
+
+            // Lanjutkan pengiriman form
+            imageForm.submit();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MnM~Mix n Match</title>
+    <link href='HCI_Kelompok_Mnm_logo.png' rel="shortcut icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="stylesel.css">
+</head>
+<body>
+    <div class="wrap"> 
+        <nav class="nav">
+            <div class="nav-mnm">
+                <p>MnM</p>
+            </div>
+            <div class="tab" id="navMenu">
+                <button class="tablinks" onclick="window.location.href = 'http://127.0.0.1:5500/yourstyle.html'")">Your Style</button>
+                <button class="tablinks" onclick="window.location.href = 'http://127.0.0.1:5500/create.html'">Create</button>
+                <button class="tablinks" onclick="window.location.href = 'http://127.0.0.1:5500/likeanddislike.html'">Our Trend</button>
+            </div>
+            <div class="log">
+                <button class="btn white-btn" id="loginBtn" onclick="window.location.href = 'http://127.0.0.1:5500/login.html'">Log Out</button>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="kotakKiri">
+                <h3>Hasil Mix & Match</h3>
+                <div class="image-container" id="selectedImagesContainer"></div>
+            </div>
+            <div class="kotakKanan">
+                <!-- Content di sini, sesuai kebutuhan -->
+            </div>
+        </div>
+    </div> 
+    <script>
+        function getQueryParams() {
+            let params = {};
+            let queryString = window.location.search.substring(1);
+            let pairs = queryString.split('&');
+            for (let pair of pairs) {
+                let [key, value] = pair.split('=');
+                key = decodeURIComponent(key);
+                value = decodeURIComponent(value);
+                if (!params[key]) {
+                    params[key] = [];
+                }
+                params[key].push(value);
+            }
+            return params;
+        }
+
+        function displaySelectedImages() {
+            let params = getQueryParams();
+            let selectedImages = [];
+
+            for (let key in params) {
+                if (key.includes('Image')) {
+                    selectedImages.push(params[key]);
+                }
+            }
+
+            let container = document.getElementById('selectedImagesContainer');
+
+            if (selectedImages.length > 0) {
+                selectedImages.forEach(src => {
+                    let imgDiv = document.createElement('div');
+                    let img = document.createElement('img');
+                    img.src = src;
+                    img.alt = 'Selected Image';
+                    imgDiv.appendChild(img);
+                    container.appendChild(imgDiv);
+                });
+            } else {
+                let noImagesMsg = document.createElement('p');
+                noImagesMsg.classList.add('no-image');
+                noImagesMsg.textContent = 'Tidak ada gambar yang dipilih.';
+                container.appendChild(noImagesMsg);
+            }
+        }
+
+        window.onload = displaySelectedImages;
+    </script>
+</body>
+</html>

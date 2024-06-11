@@ -1,0 +1,397 @@
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    
+}
+body{
+    background-image: url('back.jpeg'); /* URL gambar */
+    background-size: cover; /* Menyesuaikan ukuran gambar dengan ukuran layar */
+    background-position: center; /* Posisi gambar di tengah-tengah */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+   overflow: hidden;
+
+}
+
+.log button{
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: olive;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .35 ease;
+    margin-top: -50px;
+   
+}
+/* .log{
+    width: 30%;
+}
+
+/* .tab{
+    width: 60%;   
+} */ 
+  
+  /* Ubah warna background dari buttons on hover */
+.tab button:hover {
+    
+    color:goldenrod;
+}
+  
+  /* Buat sebuah kelas tablink active/current */
+.tab button.active {
+    color:goldenrod;
+   
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    
+}
+  
+  /* Style tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    
+    border-top: none;
+}
+.wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    
+}
+/* .nav{
+    position: fixed;
+    top: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    align-items: center;
+    z-index: 100;
+} */
+.nav {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    align-items: center;
+    z-index: 100;
+    background: rgba(128, 128, 0, 0.6); /* Semi-transparent background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(0, 0, 0, 0.05); /* Soft and faded shadow */
+    /* padding: 10px; Optional: Add some padding for a better look */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+.nav-mnm p{
+    color:white;
+    font-size: 25px;
+    font-weight: 600;
+    
+}
+
+/* .nav-mnm{
+    
+    width: 10%;
+} */
+.content {
+    display: flex;
+    height: 500px;
+    transition: background-color 0.5s ease; /* Animasi transisi */
+    justify-content: center;
+    margin-top: 50px;
+    
+    width: 100%;
+    min-height: calc(110vh - 100px); /* Menyesuaikan tinggi content agar di bawah tombol */
+}
+.Unisex{
+    color:rgb(177, 177, 0) !important;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8) !important;
+}
+.creating button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;  
+    top: 75%;   
+    left:45.5%;
+    background-color: rgb(175, 175, 0);
+    border-color: goldenrod;
+    border-radius: 30px;
+    width: 90px;
+    height: 60px;
+    cursor: pointer;
+}
+.creating button:hover{
+    color:olive
+}
+.kotakKiri{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%,-40%);
+    width: 400px; /* Atur lebar formulir sesuai kebutuhan */
+    height: 300px;
+    border: 1px solid goldenrod;
+    background-color: rgba(255, 214, 214, 0.4); /* Atur warna latar belakang formulir */
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan formulir */
+    z-index: 1; /* Pastikan formulir berada di atas elemen lain */
+}
+.kotakKanan{
+    background-image: url('unisex.jpg'); /* Ganti 'gambar.jpg' dengan URL gambar Anda */
+    background-size: contain; /* Pastikan gambar tidak terpotong */
+    background-repeat: no-repeat; /* Hindari pengulangan gambar */
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%,-40%);
+    width: 450px; /* Atur lebar formulir sesuai kebutuhan */
+    height: 500px;
+    border: 1px solid goldenrod;
+    background-color: rgba(117, 140, 124, 0.4); /* Atur warna latar belakang formulir */
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan formulir */
+    z-index: 1; /* Pastikan formulir berada di atas elemen lain */
+    
+}
+
+
+
+.kotakKiri h3{
+    font-style: oblique;
+    font-size: 50px;
+    color: olive;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.style-options{
+    /* display: flex;
+    flex-direction: column; /* Mengatur pilihan gaya ke bawah */
+    align-items: center;  
+    
+    float: left;
+    
+    height: 40vh;
+    
+}
+.style-options button{
+    
+    font-size: 22px;
+    display: block;
+    margin-bottom: 8vh;
+    
+    border:none;
+    outline: none;
+    cursor:pointer;
+    background-color: inherit;
+    color: rgb(174, 132, 24);
+}
+.style-options button:hover{
+    color:rgb(218, 165, 105);
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+    
+}
+.style-options button:active{
+    color:rgb(148, 148, 2);
+}
+
+#registerBtn{
+    margin-left: 11px;
+}
+
+.btn:hover{
+    color:goldenrod;
+}
+.form-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    width: 512px; /* Atur lebar formulir sesuai kebutuhan */
+    height: 420px;
+    border: 1px solid goldenrod;
+    background-color: rgba(255, 255, 255, 0.4); /* Atur warna latar belakang formulir */
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan formulir */
+    z-index: 1; /* Pastikan formulir berada di atas elemen lain */
+}
+.login-container{
+    position: absolute;
+    left:38px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+
+}
+.register-container{
+    position: absolute;
+    right:-520px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+
+}
+.top span{
+    
+    color: goldenrod;
+    margin-left: 5px;
+    display: flex;
+    justify-content: right;
+    padding: 10px 0;
+    margin-top: -10px;
+    
+    
+}
+.top span a{
+    
+    font-weight: 500;
+    color:olive;
+    margin-left: 5px ;
+    
+}
+.top2 span{
+    color: goldenrod;
+    margin-left: 5px;
+    display: flex;
+    justify-content: right;
+    padding: 10px 0;
+    margin-top: -10px;
+    
+}
+.top2 span a{
+    font-weight: 500;
+    color:olive;
+    margin-left: 5px ;
+    
+}
+.input-box {
+    margin-bottom: 20px; /* Memberikan jarak antara kotak input */
+}
+
+.input-field {
+    width: 90%; /* Menyesuaikan lebar kotak input */
+    padding: 10px; /* Menambahkan padding agar konten tidak terlalu dekat dengan tepi */
+}
+header{
+    color: olive;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0 30px 0;
+
+}
+.two-forms{
+    display: flex;
+    gap: 11px;
+    
+}
+.input-field{
+    font-size: 15px;
+    background: rgba(242, 255, 236, 0.8);
+    color:olive;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
+}
+.input-field:hover, .input-field:focus{
+    background:rgba(242, 255, 236, 0.5); 
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+::-webkit-input-placeholder{
+    color:olive;
+}
+.submit{
+    font-size: 15px;
+    font-weight: 500;
+    color:olive;
+    height: 40px;
+    width: 95%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background:rgba(242, 255, 236, 0.5) ;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+}
+
+.submit:hover{
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.3);
+}
+
+.two-col{
+    display: flex;
+    justify-content: space-between;
+    color: olive;
+    font-size: small;
+    margin-top: 10px;
+}
+
+.two-col.one{
+    display:flex;
+    gap:5px;
+}
+
+.two label a{
+    text-decoration:none;
+    color:olive;
+}
+
+.two label a:hover{
+    text-decoration: underline;
+
+}
+
+@media only screen and (max-width:540px){
+    .wrap{
+        min-height: 100vh;
+    }
+    .form-box{
+        width:100%;
+        height: 500px;
+    }
+    .register-container,.login-container{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .register-container.two-forms{
+        flex-direction: column;
+    }
+    gap: 0;
+}
+
